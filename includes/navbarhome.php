@@ -17,12 +17,14 @@ if (!isset($_SESSION['user'])) {
                         <a class='dropdown-item' href='index.php'>Air</a>
                     </div>
                 </li>
+                <div class='nav1'>
                 <li class='nav-item'>
                     <a class='nav-link' id='navItem' href='login'> LOGIN </a>
                 </li>
                 <li class='nav-item'>
                     <a class='nav-link' id='navItem' href='signup'> SIGNUP </a>
                 </li>
+                </div>
             </ul>
         </div>
     </nav>
