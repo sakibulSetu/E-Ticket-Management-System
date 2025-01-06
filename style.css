@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=DM+Serif+Text:ital@0;1&family=Maven+Pro:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700&family=Ubuntu:ital@1&display=swap');
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+/*Font Design*/
+
+body {
+    font-family: 'Bree Serif', serif;
+}
+
+.navbar {
+    font-family: 'Oleo Script', cursive;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.nav {
+    font-family: 'Bowlby One SC', cursive;
+}
+
+#collapsibleNavbar {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    font-family: 'Train One', cursive;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+thead {
+    font-family: 'Bungee Shade', cursive;
+}
+
+tbody {
+    font-family: 'Vast Shadow', cursive;
+}
+
+.navbar-brand {
+    font-family: 'DM Serif', cursive;
+}
+
+/*Carousel Design*/
+
+.carousel-item {
+    height: 500px;
+    transition: transform 2s ease, opacity .5s ease-out
+}
+
+.carousel-item img {
+    height: 500px;
+}
+
+/*Scrollbar Design*/
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #17a2b8;
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.3) 20%, transparent 20%, transparent 40%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.3) 60%, transparent 60%, transparent 80%, rgba(255, 255, 255, 0.3) 80%);
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-image: -webkit-linear-gradient(45deg, transparent 20%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.3) 40%, transparent 40%, transparent 60%, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0.3) 80%, transparent 80%);
+}
+
+/*Background Design*/
+
+body {
+    background: #8e9eab;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*Bus Seat Checkbox Design*/
+
+.booked {
+    color: #ff0000 !important;
+}
+
+.available {
+    color: #17a2b8;
+}
+
+input[type="checkbox"].busseat, input[type="checkbox"].busseat+label {
+    width: 35px;
+    height: 45px;
+    font-size: inherit;
+}
+
+input[type="checkbox"].busseat:checked+label:after {
+    content: "💺";
+}
+
+input[type="checkbox"].departcounter:checked+label {
+    color: #8e9eab;
+}
+
+input[type="checkbox"].departcounter:checked+label:after {
+    content: "✅";
+}
+
+input[type="checkbox"].departcounter:checked+label:after {
+    content: "✅";
+}
