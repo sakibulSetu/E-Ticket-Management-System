@@ -53,7 +53,7 @@ include("connection.php");
             <!-- MAIN -->
             <div class="col-sm-8 text-center">
                 <?php
-                include("includes/searchform.php");
+                include("includes/searchformTrain.php");
                 include("includes/searchresult.php");
                 include("includes/ticketformpayment.php");
                 ?>
