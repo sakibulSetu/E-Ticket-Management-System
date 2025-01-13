@@ -79,6 +79,46 @@ INSERT INTO `buscounter` (`REG`, `COUNTER_ID`, `OWNER`, `ADDRESS`, `CONTACT`) VA
 
 -- --------------------------------------------------------
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `traincounter`
+--
+
+CREATE TABLE `traincounter` (
+  `REG` timestamp NOT NULL DEFAULT current_timestamp(),
+  `COUNTER_ID` varchar(255) NOT NULL,
+  `OWNER` varchar(255) NOT NULL,
+  `ADDRESS` varchar(255) NOT NULL,
+  `CONTACT` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `traincounter`
+--
+
+-- --------------------------------------------------------
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `aircounter`
+--
+
+CREATE TABLE `aircounter` (
+  `REG` timestamp NOT NULL DEFAULT current_timestamp(),
+  `COUNTER_ID` varchar(255) NOT NULL,
+  `OWNER` varchar(255) NOT NULL,
+  `ADDRESS` varchar(255) NOT NULL,
+  `CONTACT` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `aircounter`
+--
+
+-- --------------------------------------------------------
+
 --
 -- Table structure for table `buslist`
 --
@@ -104,6 +144,46 @@ INSERT INTO `buslist` (`REG`, `BUS_ID`, `OWNER`, `COACH_NO`, `CLASS`, `SEAT_TYPE
 
 -- --------------------------------------------------------
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `trainlist`
+--
+
+CREATE TABLE `trainlist` (
+  `REG` timestamp NOT NULL DEFAULT current_timestamp(),
+  `Train_ID` varchar(255) NOT NULL,
+  `OWNER` varchar(255) NOT NULL,
+  `COACH_NO` varchar(255) NOT NULL,
+  `CLASS` varchar(255) NOT NULL,
+  `SEAT_TYPE` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `trainlist`
+--
+-- --------------------------------------------------------
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `airlist`
+--
+
+CREATE TABLE `airlist` (
+  `REG` timestamp NOT NULL DEFAULT current_timestamp(),
+  `Air_ID` varchar(255) NOT NULL,
+  `OWNER` varchar(255) NOT NULL,
+  `Fight_NO` varchar(255) NOT NULL,
+  `CLASS` varchar(255) NOT NULL,
+  `SEAT_TYPE` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `airlist`
+--
+-- --------------------------------------------------------
+
 --
 -- Table structure for table `busowner`
 --
@@ -111,7 +191,7 @@ INSERT INTO `buslist` (`REG`, `BUS_ID`, `OWNER`, `COACH_NO`, `CLASS`, `SEAT_TYPE
 CREATE TABLE `busowner` (
   `REG` timestamp NOT NULL DEFAULT current_timestamp(),
   `OWNER_ID` varchar(255) NOT NULL,
-  `NAME` varchar(255) NOT NULL,
+  `BUS_NAME` varchar(255) NOT NULL,
   `COMPANY` varchar(255) NOT NULL,
   `CONTACT` varchar(255) NOT NULL,
   `MAX_COUNTER` int(11) DEFAULT NULL
@@ -124,6 +204,48 @@ CREATE TABLE `busowner` (
 INSERT INTO `busowner` (`REG`, `OWNER_ID`, `NAME`, `COMPANY`, `CONTACT`, `MAX_COUNTER`) VALUES
 ('2021-05-21 14:18:16', 'challenger_101', 'Md. Sakib', 'Challenger Paribahan', '+8801816486550', 5),
 ('2021-05-26 18:56:30', 'max_101', 'Bill Gates', 'MAX PARIBAHAN', '+1111111111111', 5);
+
+-- --------------------------------------------------------
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `trainowner`
+--
+
+CREATE TABLE `trainowner` (
+  `REG` timestamp NOT NULL DEFAULT current_timestamp(),
+  `OWNER_ID` varchar(255) NOT NULL,
+  `TRAIN_NAME` varchar(255) NOT NULL,
+  `COMPANY` varchar(255) NOT NULL,
+  `CONTACT` varchar(255) NOT NULL,
+  `MAX_COUNTER` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `trainowner`
+--
+
+-- --------------------------------------------------------
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `airowner`
+--
+
+CREATE TABLE `airowner` (
+  `REG` timestamp NOT NULL DEFAULT current_timestamp(),
+  `OWNER_ID` varchar(255) NOT NULL,
+  `AIR_NAME` varchar(255) NOT NULL,
+  `COMPANY` varchar(255) NOT NULL,
+  `CONTACT` varchar(255) NOT NULL,
+  `MAX_COUNTER` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `airowner`
+--
 
 -- --------------------------------------------------------
 
@@ -155,6 +277,50 @@ INSERT INTO `busschedule` (`REG`, `BUS_ID`, `SCHEDULE_ID`, `DEPART`, `DEST`, `DE
 
 -- --------------------------------------------------------
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `trainschedule`
+--
+
+CREATE TABLE `trainschedule` (
+  `REG` timestamp NOT NULL DEFAULT current_timestamp(),
+  `TRAIN_ID` varchar(255) NOT NULL,
+  `SCHEDULE_ID` varchar(255) NOT NULL,
+  `DEPART` varchar(255) NOT NULL,
+  `DEST` varchar(255) NOT NULL,
+  `DEST_COUNTER` varchar(255) NOT NULL,
+  `PRICE` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `trainschedule`
+--
+
+-- --------------------------------------------------------
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `airschedule`
+--
+
+CREATE TABLE `airschedule` (
+  `REG` timestamp NOT NULL DEFAULT current_timestamp(),
+  `AIR_ID` varchar(255) NOT NULL,
+  `SCHEDULE_ID` varchar(255) NOT NULL,
+  `DEPART` varchar(255) NOT NULL,
+  `DEST` varchar(255) NOT NULL,
+  `DEST_COUNTER` varchar(255) NOT NULL,
+  `PRICE` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `airschedule`
+--
+
+-- --------------------------------------------------------
+
 --
 -- Table structure for table `busseatlist`
 --
@@ -172,6 +338,42 @@ CREATE TABLE `busseatlist` (
 INSERT INTO `busseatlist` (`SEAT_TYPE`, `SEAT`, `SEAT_ROW`) VALUES
 ('3seater', 'A1,A2,A3,B1,B2,B3,C1,C2,C3,D1,D2,D3,E1,E2,E3,F1,F2,F3,G1,G2,G3,H1,H2,H3', 3),
 ('4seater', 'A1,A2,A3,A4,B1,B2,B3,B4,C1,C2,C3,C4,D1,D2,D3,D4,E1,E2,E3,E4,F1,F2,F3,F4,G1,G2,G3,G4,H1,H2,H3,H4', 4);
+
+-- --------------------------------------------------------
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `trainseatlist`
+--
+
+CREATE TABLE `trainseatlist` (
+  `SEAT_TYPE` varchar(255) NOT NULL,
+  `SEAT` varchar(255) NOT NULL,
+  `SEAT_ROW` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `trainseatlist`
+--
+
+-- --------------------------------------------------------
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `airseatlist`
+--
+
+CREATE TABLE `airseatlist` (
+  `SEAT_TYPE` varchar(255) NOT NULL,
+  `SEAT` varchar(255) NOT NULL,
+  `SEAT_ROW` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `airseatlist`
+--
 
 -- --------------------------------------------------------
 
@@ -327,10 +529,40 @@ ALTER TABLE `buscounter`
   ADD KEY `OWNER` (`OWNER`);
 
 --
+-- Indexes for table `traincounter`
+--
+ALTER TABLE `traincounter`
+  ADD PRIMARY KEY (`COUNTER_ID`,`OWNER`) USING BTREE,
+  ADD KEY `OWNER` (`OWNER`);
+
+--
+-- Indexes for table `aircounter`
+--
+ALTER TABLE `aircounter`
+  ADD PRIMARY KEY (`COUNTER_ID`,`OWNER`) USING BTREE,
+  ADD KEY `OWNER` (`OWNER`);
+
+--
 -- Indexes for table `buslist`
 --
 ALTER TABLE `buslist`
   ADD PRIMARY KEY (`BUS_ID`,`OWNER`),
+  ADD KEY `OWNER` (`OWNER`),
+  ADD KEY `buslist_ibfk_2` (`SEAT_TYPE`);
+
+--
+-- Indexes for table `trainlist`
+--
+ALTER TABLE `trainlist`
+  ADD PRIMARY KEY (`TRAIN_ID`,`OWNER`),
+  ADD KEY `OWNER` (`OWNER`),
+  ADD KEY `buslist_ibfk_2` (`SEAT_TYPE`);
+
+--
+-- Indexes for table `airlist`
+--
+ALTER TABLE `airlist`
+  ADD PRIMARY KEY (`AIR_ID`,`OWNER`),
   ADD KEY `OWNER` (`OWNER`),
   ADD KEY `buslist_ibfk_2` (`SEAT_TYPE`);
 
@@ -341,6 +573,18 @@ ALTER TABLE `busowner`
   ADD PRIMARY KEY (`OWNER_ID`);
 
 --
+-- Indexes for table `trainowner`
+--
+ALTER TABLE `trainowner`
+  ADD PRIMARY KEY (`OWNER_ID`);
+
+--
+-- Indexes for table `airowner`
+--
+ALTER TABLE `airowner`
+  ADD PRIMARY KEY (`OWNER_ID`);
+
+--
 -- Indexes for table `busschedule`
 --
 ALTER TABLE `busschedule`
@@ -348,10 +592,36 @@ ALTER TABLE `busschedule`
   ADD KEY `BUS_ID` (`BUS_ID`),
   ADD KEY `schedule_ibfk_3` (`DEST_COUNTER`);
 
+-- Indexes for table `trainschedule`
+--
+ALTER TABLE `trainschedule`
+  ADD PRIMARY KEY (`SCHEDULE_ID`,`TRAIN_ID`),
+  ADD KEY `TRAIN_ID` (`TRAIN_ID`),
+  ADD KEY `schedule_ibfk_3` (`DEST_COUNTER`);
+
+-- Indexes for table `airschedule`
+--
+ALTER TABLE `airschedule`
+  ADD PRIMARY KEY (`SCHEDULE_ID`,`AIR_ID`),
+  ADD KEY `AIR_ID` (`AIR_ID`),
+  ADD KEY `schedule_ibfk_3` (`DEST_COUNTER`);
+
 --
 -- Indexes for table `busseatlist`
 --
 ALTER TABLE `busseatlist`
+  ADD PRIMARY KEY (`SEAT_TYPE`,`SEAT`) USING BTREE;
+
+--
+-- Indexes for table `trainseatlist`
+--
+ALTER TABLE `trainseatlist`
+  ADD PRIMARY KEY (`SEAT_TYPE`,`SEAT`) USING BTREE;
+
+--
+-- Indexes for table `airseatlist`
+--
+ALTER TABLE `airseatlist`
   ADD PRIMARY KEY (`SEAT_TYPE`,`SEAT`) USING BTREE;
 
 --
@@ -404,6 +674,20 @@ ALTER TABLE `buscounter`
   ADD CONSTRAINT `buscounter_ibfk_2` FOREIGN KEY (`OWNER`) REFERENCES `busowner` (`OWNER_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `traincounter`
+--
+ALTER TABLE `traincounter`
+  ADD CONSTRAINT `traincounter_ibfk_1` FOREIGN KEY (`COUNTER_ID`) REFERENCES `ulogin` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `traincounter_ibfk_2` FOREIGN KEY (`OWNER`) REFERENCES `trainowner` (`OWNER_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `aircounter`
+--
+ALTER TABLE `aircounter`
+  ADD CONSTRAINT `aircounter_ibfk_1` FOREIGN KEY (`COUNTER_ID`) REFERENCES `ulogin` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `aircounter_ibfk_2` FOREIGN KEY (`OWNER`) REFERENCES `airowner` (`OWNER_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `buslist`
 --
 ALTER TABLE `buslist`
@@ -411,10 +695,36 @@ ALTER TABLE `buslist`
   ADD CONSTRAINT `buslist_ibfk_2` FOREIGN KEY (`SEAT_TYPE`) REFERENCES `busseatlist` (`SEAT_TYPE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `trainlist`
+--
+ALTER TABLE `trainlist`
+  ADD CONSTRAINT `trainlist_ibfk_1` FOREIGN KEY (`OWNER`) REFERENCES `trainowner` (`OWNER_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `trainlist_ibfk_2` FOREIGN KEY (`SEAT_TYPE`) REFERENCES `trainseatlist` (`SEAT_TYPE`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `airlist`
+--
+ALTER TABLE `airlist`
+  ADD CONSTRAINT `airlist_ibfk_1` FOREIGN KEY (`OWNER`) REFERENCES `airowner` (`OWNER_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `airlist_ibfk_2` FOREIGN KEY (`SEAT_TYPE`) REFERENCES `airseatlist` (`SEAT_TYPE`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `busowner`
 --
 ALTER TABLE `busowner`
   ADD CONSTRAINT `busowner_ibfk_1` FOREIGN KEY (`OWNER_ID`) REFERENCES `ulogin` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `trainowner`
+--
+ALTER TABLE `trainowner`
+  ADD CONSTRAINT `trainowner_ibfk_1` FOREIGN KEY (`OWNER_ID`) REFERENCES `ulogin` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `airowner`
+--
+ALTER TABLE `airowner`
+  ADD CONSTRAINT `airowner_ibfk_1` FOREIGN KEY (`OWNER_ID`) REFERENCES `ulogin` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `busschedule`
@@ -424,11 +734,29 @@ ALTER TABLE `busschedule`
   ADD CONSTRAINT `busschedule_ibfk_3` FOREIGN KEY (`DEST_COUNTER`) REFERENCES `buscounter` (`COUNTER_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `trainschedule`
+--
+ALTER TABLE `trainschedule`
+  ADD CONSTRAINT `trainschedule_ibfk_1` FOREIGN KEY (`TRAIN_ID`) REFERENCES `trainlist` (`TRAIN_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `trainschedule_ibfk_3` FOREIGN KEY (`DEST_COUNTER`) REFERENCES `traincounter` (`COUNTER_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `airschedule`
+--
+ALTER TABLE `airschedule`
+  ADD CONSTRAINT `airschedule_ibfk_1` FOREIGN KEY (`AIR_ID`) REFERENCES `airlist` (`AIR_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `airschedule_ibfk_3` FOREIGN KEY (`DEST_COUNTER`) REFERENCES `aircounter` (`COUNTER_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `departlist`
 --
 ALTER TABLE `departlist`
   ADD CONSTRAINT `departlist_ibfk_1` FOREIGN KEY (`SCHEDULE_ID`) REFERENCES `busschedule` (`SCHEDULE_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `departlist_ibfk_2` FOREIGN KEY (`DEPART_COUNTER`) REFERENCES `buscounter` (`COUNTER_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `departlist_ibfk_3` FOREIGN KEY (`SCHEDULE_ID`) REFERENCES `trainschedule` (`SCHEDULE_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `departlist_ibfk_4` FOREIGN KEY (`DEPART_COUNTER`) REFERENCES `traincounter` (`COUNTER_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `departlist_ibfk_5` FOREIGN KEY (`SCHEDULE_ID`) REFERENCES `airschedule` (`SCHEDULE_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `departlist_ibfk_6` FOREIGN KEY (`DEPART_COUNTER`) REFERENCES `aircounter` (`COUNTER_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `guser`
@@ -447,6 +775,8 @@ ALTER TABLE `payment`
 --
 ALTER TABLE `ticket`
   ADD CONSTRAINT `ticket_ibfk_1` FOREIGN KEY (`SCHEDULE_ID`) REFERENCES `busschedule` (`SCHEDULE_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `ticket_ibfk_2` FOREIGN KEY (`SCHEDULE_ID`) REFERENCES `trainschedule` (`SCHEDULE_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `ticket_ibfk_3` FOREIGN KEY (`SCHEDULE_ID`) REFERENCES `airschedule` (`SCHEDULE_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
