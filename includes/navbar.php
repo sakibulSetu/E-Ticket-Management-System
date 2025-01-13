@@ -3,7 +3,7 @@ $user = $_SESSION["user"];
 $user_id = $_SESSION["user_id"];
 echo "
     <nav class='navbar navbar-expand-sm bg-info navbar-dark'>
-        <a class='navbar-brand' href='index'>ticket.com</a>
+        <a class='navbar-brand' href='index'>e-ticket.com</a>
 
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#collapsibleNavbar'>
             <span class='navbar-toggler-icon'></span>
@@ -11,7 +11,7 @@ echo "
         <div class='collapse navbar-collapse' id='collapsibleNavbar'>
             <ul class='navbar-nav'>
                 <li class='nav-item'>
-                    <a class='nav-link text-uppercase' href='#'> This is $user account </a>
+                    <a class='nav-link text-uppercase' href='#'>  $user  </a>
                 </li>
                 <li class='nav-item dropdown'>
                     <a class='nav-link dropdown-toggle' href='#' id='navbardrop' data-toggle='dropdown'> $user_id </a>

@@ -22,7 +22,7 @@ include("../includes/isadmin.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" href="../logo.png" />
-    <title>e-ticket.com</title>
+    <title>Register TRAIN Owners</title>
 </head>
 
 <body>
@@ -54,7 +54,7 @@ include("../includes/isadmin.php");
             <!-- MAIN -->
             <div class="col-sm-8 text-center">
                 <?php
-                include("../includes/adminhome.php");
+                include("../includes/trainownerregform.php");
                 ?>
             </div>
             <!-- SIDEBAR -->
@@ -76,6 +76,7 @@ include("../includes/isadmin.php");
             </div>
         </div>
     </div>
+
 
 </body>
 
