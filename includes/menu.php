@@ -16,10 +16,24 @@ if (isset($_SESSION['user'])) {
         <a class='nav-link active bg-secondary' href='airregisterowner.php'>Register Air Owner</a>
       </li><br>
       <li class='nav-item'>
-        <a class='nav-link active bg-secondary' href='listofowners.php'>List of Owners</a>
+        <a class='nav-link active bg-secondary' href='listofowners.php'>List of BUS Owners</a>
       </li><br>
       <li class='nav-item'>
-        <a class='nav-link active bg-secondary' href='listofcounters.php'>List of Counters</a>
+        <a class='nav-link active bg-secondary' href='listoftrainowners.php'>List of TRAIN Owners</a>
+      </li><br>
+      <li class='nav-item'>
+        <a class='nav-link active bg-secondary' href='listofairowners.php'>List of AIR Owners</a>
+      </li><br>
+      <li class='nav-item'>
+        <a class='nav-link active bg-secondary' href='listofcounters.php'>List of Bus Counters</a>
+      </li><br>
+      </li><br>
+      <li class='nav-item'>
+        <a class='nav-link active bg-secondary' href='listoftraincounters.php'>List of Train Counters</a>
+      </li><br>
+      </li><br>
+      <li class='nav-item'>
+        <a class='nav-link active bg-secondary' href='listofaircounters.php'>List of Air Counters</a>
       </li><br>
       <li class='nav-item'>
         <a class='nav-link active bg-secondary' href='listofpayment.php'>List of Payments</a>
@@ -31,7 +45,10 @@ if (isset($_SESSION['user'])) {
         <a class='nav-link active bg-secondary' href='../'>Search Bus</a>
       </li><br>
       <li class='nav-item'>
-        <a class='nav-link active bg-secondary' href='../all/bookedbustickets.php'>Booked Bus Tickets</a>
+        <a class='nav-link active bg-secondary' href='../indexTrain.php'>Search Train</a>
+      </li><br>
+      <li class='nav-item'>
+        <a class='nav-link active bg-secondary' href='../indexAir.php'>Search Air</a>
       </li><br>
     </ul>
     <br>
@@ -115,7 +132,7 @@ if (isset($_SESSION['user'])) {
         <a class='nav-link active bg-secondary' href='../all/donepayment.php'>Online Payments</a>
       </li><br>
       <li class='nav-item'>
-        <a class='nav-link active bg-secondary' href='addcounter.php'>Add Counter</a>
+        <a class='nav-link active bg-secondary' href='addaircounter.php'>Add Counter</a>
       </li><br>
       <li class='nav-item'>
         <a class='nav-link active bg-secondary' href='addair.php'>Add AIR</a>
@@ -130,10 +147,10 @@ if (isset($_SESSION['user'])) {
         <a class='nav-link active bg-secondary' href='ownerairs.php'>List of AIRs</a>
       </li><br>
       <li class='nav-item'>
-        <a class='nav-link active bg-secondary' href='ownerschedules.php'>List of Scheduled Buses</a>
+        <a class='nav-link active bg-secondary' href='airownerschedules.php'>List of Scheduled AIRs</a>
       </li><br>
       <li class='nav-item'>
-        <a class='nav-link active bg-secondary' href='../'>Search Air</a>
+        <a class='nav-link active bg-secondary' href='../indexAir.php'>Search Air</a>
       </li><br>
     </ul>
     <br>
@@ -144,6 +161,12 @@ if (isset($_SESSION['user'])) {
     <ul class='nav flex-column nav-pills nav-fill'>
       <li class='nav-item'>
         <a class='nav-link active bg-secondary' href='../all/bookedbustickets.php'>Booked Bus Tickets</a>
+      </li><br>
+      <li class='nav-item'>
+        <a class='nav-link active bg-secondary' href='../all/bookedtraintickets.php'>Booked Train Tickets</a>
+      </li><br>
+      <li class='nav-item'>
+        <a class='nav-link active bg-secondary' href='../all/bookedairtickets.php'>Booked Air Tickets</a>
       </li><br>
       <li class='nav-item'>
         <a class='nav-link active bg-secondary' href='../all/donepayment.php'>Online Payments</a>
@@ -171,19 +194,10 @@ if (isset($_SESSION['user'])) {
         <a class='nav-link active bg-secondary' href='../'>Book Bus Ticket</a>
       </li><br>
       <li class='nav-item'>
-        <a class='nav-link active bg-secondary' href='../'>Book Train Ticket</a>
+        <a class='nav-link active bg-secondary' href='../indexTrain.php'>Book Train Ticket</a>
       </li><br>
       <li class='nav-item'>
-        <a class='nav-link active bg-secondary' href='../'>Book Air Ticket</a>
-      </li><br>
-      <li class='nav-item'>
-        <a class='nav-link active bg-secondary' href='../'>Book Launch Ticket</a>
-      </li><br>
-      <li class='nav-item'>
-        <a class='nav-link active bg-secondary' href='../'>Book Movie Ticket</a>
-      </li><br>
-      <li class='nav-item'>
-        <a class='nav-link active bg-secondary' href='../'>Book Hotel</a>
+        <a class='nav-link active bg-secondary' href='../indexAir.php'>Book Air Ticket</a>
       </li><br>
     </ul>
     <br>

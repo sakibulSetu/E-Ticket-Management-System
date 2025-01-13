@@ -4,7 +4,7 @@ $type = $_SESSION['user'];
 $user_id = $_SESSION['user_id'];
 include("../connection.php");
 include("../includes/isloggedout.php");
-include("../includes/istrainowner.php");
+include("../includes/isairowner.php");
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +54,7 @@ include("../includes/istrainowner.php");
             <!-- MAIN -->
             <div class="col-sm-8 text-center">
                 <?php
-                include("../includes/traincounterregform.php");
+                include("../includes/aircounterregform.php");
                 ?>
             </div>
             <!-- SIDEBAR -->

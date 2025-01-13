@@ -22,7 +22,7 @@ include("../includes/isowner.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" href="../logo.png" />
-    <title>ticket.com</title>
+    <title>e-ticket.com</title>
 </head>
 
 <body>

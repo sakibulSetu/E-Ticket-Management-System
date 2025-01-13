@@ -43,7 +43,7 @@ if (isset($_POST['register'])) {
     $utype = "TRAINowner";
     $pass = md5($pass);
     $loginquery = "INSERT INTO ulogin (UTYPE,ID,PASS) VALUES ('$utype','$id','$pass')";
-    $acquery = "insert into trainowner (OWNER_ID,NAME,COMPANY,CONTACT,MAX_COUNTER) values ('$id','$owner','$company','$contact','$maxcounter')";
+    $acquery = "insert into trainowner (OWNER_ID,TRAIN_NAME,COMPANY,CONTACT,MAX_COUNTER) values ('$id','$owner','$company','$contact','$maxcounter')";
 
     if (mysqli_query($con, $loginquery) && mysqli_query($con, $acquery)) {
         echo "<script>alert('Successfully Registered TRAIN OWNER ID( $id ).')</script>";

@@ -22,7 +22,7 @@ include("../includes/istrainowner.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" href="../logo.png" />
-    <title>Add Counter</title>
+    <title>Schedule TRAIN</title>
 </head>
 
 <body>
@@ -54,7 +54,7 @@ include("../includes/istrainowner.php");
             <!-- MAIN -->
             <div class="col-sm-8 text-center">
                 <?php
-                include("../includes/traincounterregform.php");
+                include("../includes/trainscheduleform.php");
                 ?>
             </div>
             <!-- SIDEBAR -->

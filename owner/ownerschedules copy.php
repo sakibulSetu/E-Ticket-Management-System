@@ -4,7 +4,7 @@ $type = $_SESSION['user'];
 $user_id = $_SESSION['user_id'];
 include("../connection.php");
 include("../includes/isloggedout.php");
-include("../includes/istrainowner.php");
+include("../includes/isowner.php");
 ?>
 
 <!DOCTYPE html>
@@ -19,10 +19,12 @@ include("../includes/istrainowner.php");
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" href="../logo.png" />
-    <title>Add Counter</title>
+    <title>List of Schedules</title>
 </head>
 
 <body>
@@ -54,7 +56,7 @@ include("../includes/istrainowner.php");
             <!-- MAIN -->
             <div class="col-sm-8 text-center">
                 <?php
-                include("../includes/traincounterregform.php");
+                include("../includes/schedulelist.php");
                 ?>
             </div>
             <!-- SIDEBAR -->

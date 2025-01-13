@@ -54,7 +54,7 @@ include("connection.php");
             <div class="col-sm-8 text-center">
                 <?php
                 include("includes/searchformAir.php");
-                include("includes/searchresult.php");
+                include("includes/searchresultair.php");
                 include("includes/ticketformpayment.php");
                 ?>
             </div>

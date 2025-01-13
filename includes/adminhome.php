@@ -17,7 +17,7 @@ while ($row = mysqli_fetch_array($result)) {
     if ($utype == 'admin')
         $utype = 'ADMIN';
     else if ($utype == 'owner')
-        $utype = 'OWNER';
+        $utype = 'BUSowner';
     else if ($utype == 'counter')
         $utype = 'COUNTER';
     else if ($utype == 'user')
